@@ -1,0 +1,42 @@
+html,body {
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+label {
+    font-weight: bold;
+
+}
+
+input[type="text"],input[type="email"] {
+    border: none;
+    border-bottom: 1px solid #f63
+}
+@media only screen and (max-width: 600px) {
+        h1{
+            font-size: 28px !important;
+            text-align: center !important;
+        }
+        h2,
+        h3,
+        h4 {
+            font-size: 22px !important;
+        }
+        h5,
+        h6 {
+            font-size: 12px !important;
+        }
+
+        p {
+            font-size: 10px;
+        }
+        .card-img-top{
+            width: 60%;
+        }
+        .hinh{
+            width: 30%;
+        }
+        blockquote{
+            text-align: left !important;
+            padding-left: 3px;
+        }
+  }

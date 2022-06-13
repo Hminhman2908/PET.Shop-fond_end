@@ -1,0 +1,133 @@
+<script>
+    if (sessionStorage.getItem("Danh_sach_Chon") == undefined) {
+        window.location = "../index.html"
+    }
+</script>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Giỏ hàng của bạn</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="../images/PET.png" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/gio-hang.css">
+</head>
+
+<body>
+    <div class="container-fluid bg-light" id="Th_Cuahang">
+        <div class="row pt-2">
+            <div id="header"
+            class="col-12 col-md-2 col-xl-2 text-center align-content-center justify-content-center display-3">
+            <img src="../images/PET.png" class="img-fluid hinh">
+            </div>
+            <div class="col-10 col-md-10 col-xl-10">
+            <h1 class="mb-0 text-primary text-center">Cửa hàng Thu Trân</h1>
+            <blockquote class="blockquote" style="text-align: center;">
+
+                <footer class="blockquote-footer"> <cite title="Source Title">Phục vụ Quí khách 24/7</cite>
+                </footer>
+                <footer class="blockquote-footer"> <cite title="Source Title">
+                    <i class="fa fa-home" aria-hidden="true"></i> : 137E Nguyễn Chí Thanh, Phường 9, Quận 5, Hồ Chí Minh</cite>
+                </footer>
+                <footer class="blockquote-footer"> <cite title="Source Title">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i> : admin@thutran.com -
+                    <i class="fa fa-phone" aria-hidden="true"></i>: <a href="tel:08 777 6666">(028)38.351.056</a>
+                </cite></footer>
+            </blockquote>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid btn text-left" id="Th_Chuc_nang">
+        <button type="button" class="btn btn-success" id="Th_Dong_y">
+            Đồng ý
+        </button>
+        <button type="button" class="btn btn-danger" id="Th_Bo_qua">
+            Xóa Đơn hàng
+        </button>
+        <button type="button" class="btn btn-danger" onclick="window.location=`../index.html`" id="Th_Mua_tiep">
+            Mua tiếp
+        </button>
+    </div>
+    <div class="container-fluid">
+        <div class="btn btn-dark btn-block text-white" id="Th_Thong_bao">
+            <h3 class="mt-1">GIỎ HÀNG CỦA BẠN</h3>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row pt-2" id="Th_Cha">
+            <div class="col-12 col-md-7 table-responsive">
+                <table class="table table-sm table-bordered table-striped table-hover">
+                    <thead class="bg-primary text-white">
+                        <tr class="text-center">
+                            <th class="text-nowrap">Hình </th>
+                            <th class="text-nowrap">Tên </th>
+                            <th class="text-nowrap">Số lượng </th>
+                            <th class="text-nowrap">Đơn giá Bán</th>
+                            <th class="text-nowrap">Thành tiền</th>
+                            <th> </th>
+                        </tr>
+                    </thead>
+                    <tbody id="Th_Danh_sach_San_pham_Mua"></tbody>
+                </table>
+            </div>
+            <div class="col-12 col-md-5">
+                <h3 class="text-info">THÔNG TIN GIAO HÀNG</h3>
+                <form class="pl-2 pr-2">
+                    <div class="form-group">
+                        <label for="Th_Ho_ten">Họ tên: </label>
+                        <input type="text" class="form-control" id="Th_Ho_ten">
+                    </div>
+                    <div class="form-group">
+                        <label for="Th_Email">Email: </label>
+                        <input type="text" class="form-control" id="Th_Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="Th_Dien_thoai">Điện thoại: </label>
+                        <input type="text" class="form-control" id="Th_Dien_thoai">
+                    </div>
+                    <div class="form-group">
+                        <label for="Th_Dia_chi">Địa chỉ Giao hàng:</label>
+                        <input type="text" class="form-control" id="Th_Dia_chi">
+                    </div>
+                    <div class="form-group">
+                        <label for="Th_Ngay_Giao_hang">Ngày Giao hàng:</label>
+                        <input type="date" class="form-control" id="Th_Ngay_Giao_hang">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="container-fluid bg-dark text-white">
+        <div class="row">
+            <div class="col-12 p-3 text-center">
+                <script>
+                    let d = new Date();
+                    let html = `&COPY; ${d.getFullYear()} Designer Lập trình viên javaScript`;
+                    document.write(html);
+                </script>© 2022 Designer Lập trình viên javaScript
+            </div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/gioHang.js"></script>
+
+</body>
+
+</html>

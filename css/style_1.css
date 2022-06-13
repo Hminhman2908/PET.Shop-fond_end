@@ -1,0 +1,66 @@
+html,
+        body {
+            font-size: 14px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .card-img-top {
+            width: 70%;
+            padding-top: .5rem;
+
+        }
+
+        .card {
+            align-items: center;
+            box-shadow: 5px 8px #888888;
+            margin-bottom: 5px;
+        }
+
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+        }
+
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        }
+
+        .carousel-indicators li {
+            background-color: green;
+        }
+
+        #carouselId img {
+            width: 60%;
+            height: auto;
+        }
+        
+        @media only screen and (max-width: 600px) {
+
+            
+            h1{
+                font-size: 28px !important;
+                text-align: center !important;
+            }
+            h2,
+            h3,
+            h4 {
+                font-size: 22px !important;
+            }
+            h5,
+            h6 {
+                font-size: 12px !important;
+            }
+
+            p {
+                font-size: 10px;
+            }
+            .card-img-top{
+                width: 60%;
+            }
+            .hinh{
+                width: 30%;
+            }
+            blockquote{
+                text-align: left !important;
+                padding-left: 3px;
+            }
+        }
